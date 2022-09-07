@@ -9,7 +9,7 @@ interface Props {
 
 const Tasks: React.FC<Props> = ({ tasks }) => {
   const tasksQuantity = tasks.length;
-  const completedTasks = tasks.filter(task => task.isCompleted);
+  const completedTasks = tasks.filter(task => task.isCompleted).length;
 
   return (
     <section className={styles.tasks}>
@@ -20,9 +20,9 @@ const Tasks: React.FC<Props> = ({ tasks }) => {
         </div>
         <div>
           <p className={styles.textPurple}>Concluídas</p>
-          <div>
+          <span>
             {completedTasks} de {tasksQuantity}
-          </div>
+          </span>
         </div>
       </header>
       <div className={styles.list}>

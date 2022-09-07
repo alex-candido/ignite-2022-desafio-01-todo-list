@@ -12,14 +12,30 @@ export interface ITask {
 const App: React.FC = () => {
   const [tasks, setTasks] = React.useState<ITask[]>([
     {
-      id: 'teste',
+      id: 'teste1',
       title: 'teste',
       isCompleted: true,
     },
+    {
+      id: 'teste2',
+      title: 'teste',
+      isCompleted: false,
+    },
   ]);
+
+  function addTask(taskTitle: string): void {
+    setTasks([
+      ...tasks,
+      {
+        id: crypto.randomUUID(),
+        title: taskTitle,
+        isCompleted: false,
+      },
+    ]);
+  }
   return (
     <>
-      <Header setTasks={setTasks} />
+      <Header onAddTask={addTask} />
       <Tasks tasks={tasks} />
     </>
   );

@@ -17,6 +17,11 @@
   margin-right: auto;
 }
 
+p.textCompleted {
+  color: var(--gray-300);
+  text-decoration: line-through;
+}
+
 .checkContainer {
   min-width: 1.125rem;
   height: 1.125rem;

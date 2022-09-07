@@ -33,10 +33,16 @@ const App: React.FC = () => {
       },
     ]);
   }
+
+  function deleteTaskById(taskId: string): void {
+    const newTasks = tasks.filter(task => task.id !== taskId);
+    setTasks(newTasks);
+  }
+
   return (
     <>
       <Header onAddTask={addTask} />
-      <Tasks tasks={tasks} />
+      <Tasks tasks={tasks} onDelete={deleteTaskById} />
     </>
   );
 };

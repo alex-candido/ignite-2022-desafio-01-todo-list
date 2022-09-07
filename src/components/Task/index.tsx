@@ -5,9 +5,10 @@ import styles from './task.module.css';
 
 interface Task {
   task: ITask;
+  onDelete: (taskId: string) => void;
 }
 
-const Task: React.FC<Task> = ({ task }) => {
+const Task: React.FC<Task> = ({ task, onDelete }) => {
   return (
     <div className={styles.task}>
       <button type="button" className={styles.checkContainer}>
@@ -16,7 +17,11 @@ const Task: React.FC<Task> = ({ task }) => {
 
       <p>{task.title}</p>
 
-      <button type="button" className={styles.deleteButton}>
+      <button
+        type="submit"
+        className={styles.deleteButton}
+        onClick={() => onDelete(task.id)}
+      >
         <TbTrash />
       </button>
     </div>

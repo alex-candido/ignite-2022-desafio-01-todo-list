@@ -3,6 +3,8 @@ import Header from './components/Header';
 import Tasks from './components/Tasks';
 import './styles/global.css';
 
+const LOCAL_STORAGE_KEY = 'todo:savedTasks';
+
 export interface ITask {
   id: string;
   title: string;
@@ -12,8 +14,13 @@ export interface ITask {
 const App: React.FC = () => {
   const [tasks, setTasks] = React.useState<ITask[]>([]);
 
+  function setTasksAndSave(newTasks: ITask[]): void {
+    setTasks(newTasks);
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newTasks));
+  }
+
   function addTask(taskTitle: string): void {
-    setTasks([
+    setTasksAndSave([
       ...tasks,
       {
         id: crypto.randomUUID(),
@@ -25,7 +32,7 @@ const App: React.FC = () => {
 
   function deleteTaskById(taskId: string): void {
     const newTasks = tasks.filter(task => task.id !== taskId);
-    setTasks(newTasks);
+    setTasksAndSave(newTasks);
   }
 
   function toggleTaskCompletedById(taskId: string) {
@@ -38,7 +45,7 @@ const App: React.FC = () => {
       }
       return task;
     });
-    setTasks(newTasks);
+    setTasksAndSave(newTasks);
   }
 
   return (

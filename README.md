@@ -1,6 +1,6 @@
 <img alt="GoStack" src="/src/assets/todo-list.png" />
 
-# Ignite 2022 - ToDo List
+# Ignite 2022 - To-do List
 
 To-Do List é uma aplicação web de controle de tarefas no estilo to-do list, A aplicação contem as seguintes funcionalidades como, adicionar uma nova tarefa, marcar e desmarcar uma tarefa como concluída, Remover uma tarefa da listagem, Mostrar o progresso de conclusão das tarefas.
 

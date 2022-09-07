@@ -1,46 +1,73 @@
-# Getting Started with Create React App
+<img alt="GoStack" src="/src/assets/todo-list.png" />
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Ignite React 2022 - Desafio 01 - To-Do List
 
-## Available Scripts
+To-Do List é uma aplicação web de controle de tarefas no estilo to-do list, A aplicação contem as seguintes funcionalidades como, adicionar uma nova tarefa, marcar e desmarcar uma tarefa como concluída, Remover uma tarefa da listagem, Mostrar o progresso de conclusão das tarefas.
 
-In the project directory, you can run:
+Suas abordagens envolve padronização de projetos React, CSS modules, Componetização, Typescript, além de Ferramentas como ESLint, Prettier e EditorConfig. Acesse [ToDo List](https://todo-list-challenge-01.netlify.app/).
 
-### `npm start`
+## 🚀 Abordagens
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Hooks
+- CSS modules
+- Componetização
+- Typescript
+- ESLint, Prettier e EditorConfig
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+## 📌 Foi utilizado
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Dependências de Projeto
 
-### `npm run build`
+- @testing-library/jest-dom
+- @testing-library/react
+- @testing-library/user-event
+- @types/jest
+- @types/node
+- @types/react
+- @types/react-dom
+- react
+- react-dom
+- react-icons
+- react-router-dom
+- react-scripts
+- styled-components
+- web-vitals
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Dependências de Desenvolvimento
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- @typescript-eslint/eslint-plugin
+- @typescript-eslint/parser
+- eslint
+- eslint-config-airbnb
+- eslint-config-prettier
+- eslint-import-resolver-typescript
+- eslint-plugin-import
+- eslint-plugin-jsx-a11y
+- eslint-plugin-prettier
+- eslint-plugin-react
+- eslint-plugin-react-hooks
+- prettier
+- typescript
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ▶️ Iniciando a aplicação
 
-### `npm run eject`
+- Clone esse repositório
+```
+$ git clone https://github.com/alex-candido/ignite-2022-desafio-01-todo-list.git
+```
+- Instalar dependências
+```
+$ npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Inicie o projeto
+```
+$ npm start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img src="/src/assets/todo-empty.png" alt="layout">
+<img src="/src/assets/todo.png" alt="layout">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Feito por Alex Cândido [Linkedin](https://www.linkedin.com/in/alexcndd/)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
